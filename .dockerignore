@@ -1,0 +1,11 @@
+node_modules
+mobile/android
+.git
+.gitignore
+*.md
+AGENTS.md
+run.bat
+render.yaml
+database.sqlite
+.env
+.gitkeep
