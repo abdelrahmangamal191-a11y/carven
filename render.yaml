@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: center-api
+    name: center-app
     env: node
-    buildCommand: cd backend && npm install
+    buildCommand: cd web && npm install && npm run build && cd ../backend && npm install
     startCommand: cd backend && node src/index.js
     healthCheckPath: /api/health
     envVars:
