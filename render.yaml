@@ -1,13 +1,13 @@
 services:
   - type: web
-    name: center-app
+    name: center-api
     env: node
-    buildCommand: cd web && npm install && npm run build && cd ../backend && npm install
+    buildCommand: cd backend && npm install
     startCommand: cd backend && node src/index.js
     healthCheckPath: /api/health
     envVars:
       - key: NODE_VERSION
-        value: 20
+        value: "20"
       - key: DATABASE_URL
         fromDatabase:
           name: center-db
